@@ -5,7 +5,7 @@ programa
 	cadeia tipoConsulta
 	logico quartos[20]
 	inteiro totalConsultas = 0, totalInternacao = 0
-	real valorConsulta = 0, valorInternacao = 0
+	real valorConsulta = 0.0, valorInternacao = 0.0
 	inteiro selecaoQuartos = 0 
 	
 	funcao inicio()
@@ -115,18 +115,38 @@ programa
 		}
 	}
 	
-	funcao checkquartos()
+	/*
+	funcao quartosVazios(inteiro i)
 	{
-		se (quartos[selecaoQuartos] == falso){
-			quartos[selecaoQuartos] = verdadeiro
-			escreva("Quarto reservado!")
-			Util.aguarde(2000) 
-		}senao{
-			escreva("\nQuarto ocupado!", "Selecione outro!")
-			Util.aguarde(2000)
-			limpa() 
-			internacao()
-			}	
+		escreva("\nQuarto"," ", i+1," ", "está vazio")	
+	}
+	
+	funcao quartosOcupados(inteiro i)
+	{
+		escreva("\nQuarto"," ", i+1," ", "está ocupado")	
+	}
+	*/
+	funcao internacao()
+	{
+	cadeia telefone, nome
+	
+		escreva("\nDigite o nome do paciente:", " ")
+		leia(nome)
+		
+		escreva("\nDigite o telefone do paciente:", " ")
+		leia(telefone)
+		
+		listagemDeQuartos()
+		
+		escreva("\nDigite o quarto selecionado:", " ")
+		leia(selecaoQuartos)
+		
+		selecaoQuartos -=1
+		checkNumeros()
+		
+		valorInternacao += 500
+		totalInternacao ++
+		
 	}
 	
 	funcao checkNumeros()
@@ -142,44 +162,27 @@ programa
 		}
 	}
 	
-	/*
-	funcao quartosVazios(inteiro i)
+	funcao checkquartos()
 	{
-		escreva("\nQuarto"," ", i+1," ", "está vazio")	
+		se (quartos[selecaoQuartos] == falso){
+			quartos[selecaoQuartos] = verdadeiro
+			escreva("Quarto reservado!")
+			Util.aguarde(2000) 
+		}senao{
+			escreva("\nQuarto ocupado!", "Selecione outro!")
+			Util.aguarde(2000)
+			limpa() 
+			internacao()
+			}	
 	}
 	
-	funcao quartosOcupados(inteiro i)
-	{
-		escreva("\nQuarto"," ", i+1," ", "está ocupado")	
-	}
-	*/
-	
-	funcao internacao()
-	{
-	cadeia telefone, nome
-	
-		
-		escreva("\nDigite o nome do paciente:", " ")
-		leia(nome)
-		escreva("\nDigite o telefone do paciente:", " ")
-		leia(telefone)
-		listagemDeQuartos()
-		escreva("\nDigite o quarto selecionado:", " ")
-		leia(selecaoQuartos)
-		selecaoQuartos -=1
-		checkNumeros()
-		valorInternacao += 500
-		totalInternacao ++
-		
-	}
 	funcao faturamento()
-	{
-	cadeia menu
-		  escreva("\nTotal de Consultas: ", " ", totalConsultas)
-            escreva("\nTotal de Internações: ", " ", totalInternacao)
-            escreva("\nTotal Faturado em Consultas: ", " ","R$", valorConsulta)
-            escreva("\nTotal Faturado em Internações: ", " ","R$", valorInternacao)
-            escreva("\nTotal Faturado: ", " ","R$", (valorConsulta + valorInternacao))
+	{	
+		escreva("\nTotal de Consultas: ", " ", totalConsultas)
+		escreva("\nTotal de Internações: ", " ", totalInternacao)
+		escreva("\nTotal Faturado em Consultas: ", " ","R$", valorConsulta)
+		escreva("\nTotal Faturado em Internações: ", " ","R$", valorInternacao)
+		escreva("\nTotal Faturado: ", " ","R$", (valorConsulta + valorInternacao))
          
 	}
 	
@@ -190,8 +193,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 80; 
- * @DOBRAMENTO-CODIGO = [47, 105, 117, 131];
+ * @POSICAO-CURSOR = 2634; 
+ * @DOBRAMENTO-CODIGO = [47, 78, 105, 151, 164];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
