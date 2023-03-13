@@ -113,14 +113,19 @@ programa
 
 	funcao listagemDeQuartos()
 	{
+		escreva("~~Lista de Quartos~~")
 		para(inteiro i=0; i < 20; i++){
+			se(i%5 == 0) escreva("\n\n")
 			se (quartos[i] == falso){
-				escreva("\nQuarto"," ", i+1," ", "está vazio")	
+				escreva("Quarto"," ", i+1," ", "está vazio\t")	
 				
 			}senao{
-				escreva("\nQuarto"," ", i+1," ", "está ocupado")	
+				escreva("Quarto"," ", i+1," ", "está ocupado\t")	
 			}
 		}
+
+		escreva("\n")
+		Util.aguarde(2000)
 	}
 	
 	/*
@@ -138,6 +143,7 @@ programa
 	{
 		dadosPaciente()
 		
+		escreva("\n")
 		listagemDeQuartos()
 		
 		escreva("\nDigite o quarto selecionado:", " ")
@@ -148,6 +154,10 @@ programa
 		
 		valorInternacao += 500
 		totalInternacao ++
+		
+		escreva("\nInternação feita!", "\nRetornando ao menu!")
+		Util.aguarde(2000)
+		limpa()
 		
 	}
 	
@@ -185,6 +195,10 @@ programa
 		escreva("\nTotal Faturado em Consultas: ", " ","R$", valorConsulta)
 		escreva("\nTotal Faturado em Internações: ", " ","R$", valorInternacao)
 		escreva("\nTotal Faturado: ", " ","R$", (valorConsulta + valorInternacao))
+		
+		escreva("\n\nFaturamento feito!", "\nRetornando ao menu!")
+		Util.aguarde(3000)
+		limpa()
          
 	}
 }
@@ -193,8 +207,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1394; 
- * @DOBRAMENTO-CODIGO = [113, 153, 166];
+ * @POSICAO-CURSOR = 2252; 
+ * @DOBRAMENTO-CODIGO = [47, 79, 141, 163, 176];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
