@@ -5,7 +5,7 @@ programa
 	cadeia nome, tipoConsulta, telefone
 	logico quartos[20]
 	inteiro totalConsultas = 0, totalInternacao = 0
-	real valorConsulta = 0, valorInternacao = 0
+	real valorConsulta = 0.0, valorInternacao = 0.0
 	inteiro selecaoQuartos = 0 
 	
 	
@@ -20,6 +20,7 @@ programa
 			escreva("-")
 		
 	}
+	limpa()
 	escreva("\n")
 	escreva("| Digite uma opção:\t\t|\n")
 	escreva("|\t\t\t\t|")
@@ -100,18 +101,15 @@ programa
 	
 	funcao listagemDeQuartos()
 	{
+	
 	para(inteiro i=0; i < 20; i++){
 		se (quartos[i] == falso){
 			quartosVazios(i)
 			
-			
 		}senao{
 			quartosOcupados(i)
-			
 		}
-		
-		}
-		
+	}	
 	}
 	funcao quartosOcupados(inteiro i)
 	{
@@ -157,12 +155,14 @@ programa
 	}
 	funcao faturamento()
 	{
-	cadeia menu
+	
 		  escreva("\nTotal de Consultas: ", " ", totalConsultas)
             escreva("\nTotal de Internações: ", " ", totalInternacao)
             escreva("\nTotal Faturado em Consultas: ", " ","R$", valorConsulta)
             escreva("\nTotal Faturado em Internações: ", " ","R$", valorInternacao)
             escreva("\nTotal Faturado: ", " ","R$", (valorConsulta + valorInternacao))
+            
+            
          
 	}
 	
@@ -173,7 +173,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2322; 
+ * @POSICAO-CURSOR = 422; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
