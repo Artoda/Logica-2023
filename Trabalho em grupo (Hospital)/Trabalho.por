@@ -8,55 +8,71 @@ programa
 	real valorConsulta = 0, valorInternacao = 0
 	inteiro selecaoQuartos = 0 
 	
-	
 	funcao inicio()
-	{
+	{	
 	inteiro decisao = 0
-	faca{
-	
-	escreva("\n\n")
-	escreva("Bem-vindo(a) ao hospital XPTO\n")
-	para(inteiro i=0; i < 33; i++){
-			escreva("-")
+	faca
+	{
+		menuPrincipal()
 		
+		escreva("\n")
+		leia(decisao)
+		limpa()
+
+		escolha (decisao){
+			caso 1: consulta() 
+			pare
+			caso 2: internacao()
+			pare
+			
+			caso 3: listagemDeQuartos()
+			pare
+			
+			caso 4: faturamento()
+			pare
+			
+			caso 5: escreva("---> Fim do programa <---")
+			pare
+			
+			caso contrario:
+				escreva("\nOpção invalida", "\nRetornando ao menu....")
+				Util.aguarde(1800) 
+				limpa()
+			}
+	}enquanto (decisao!=5)
+	
 	}
-	escreva("\n")
-	escreva("| Digite uma opção:\t\t|\n")
-	escreva("|\t\t\t\t|")
-	escreva("\n")
-	escreva(  "|  1 - Consulta Ambulatorial\t|\n",
+	
+	
+	funcao menuPrincipal()
+	{
+		escreva("\n")
+		escreva("~~Bem-vindo(a) ao hospital XPTO~~\n")
+		escreva("\n")
+		
+		para(inteiro i=0; i < 33; i++)
+		{
+			escreva("-")
+		}
+		
+		escreva("\n")
+		escreva("| Digite uma opção:\t\t|\n")
+		escreva("|\t\t\t\t|")
+		escreva("\n")
+		
+		escreva(  "|  1 - Consulta Ambulatorial\t|\n",
 				"|  2 - Internação\t\t|\n",
 				"|  3 - Listar Quartos\t\t|\n",
 				"|  4 - Faturamento\t\t|\n",
 				"|  5 - Sair do Programa\t\t|\n")
-	
-	escreva("|\t\t\t\t|")
-	escreva("\n")
-		para(inteiro i=0; i < 33; i++){
-			escreva("-")
 		
+		escreva("|\t\t\t\t|")
+		escreva("\n")
+		
+		para(inteiro i=0; i < 33; i++)
+		{
+			escreva("-")
 		}
-	escreva("\n")
-	leia(decisao)
-	limpa()
-
-	escolha (decisao){
-		caso 1: consulta() 
-		pare
-		caso 2: internacao()
-		pare
-		caso 3: listagemDeQuartos()
-		pare
-		caso 4: faturamento()
-		pare
-		caso 5: escreva("---> Fim do programa <---")
-		pare
-		caso contrario:
-			escreva("\nOpção invalida", "\nRetornando ao menu....")
-			Util.aguarde(1800) 
-			limpa()
-			}
-	}enquanto (decisao!=5)
 	}
 	
 	funcao consulta ()
@@ -173,7 +189,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2322; 
+ * @POSICAO-CURSOR = 829; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
