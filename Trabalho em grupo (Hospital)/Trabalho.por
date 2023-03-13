@@ -61,16 +61,17 @@ programa
 			escreva("-")
 		}
 		
+
 		escreva("\n")
 		escreva("| Digite uma opção:\t\t|\n")
 		escreva("|\t\t\t\t|")
 		escreva("\n")
 		
 		escreva(  "|  1 - Consulta Ambulatorial\t|\n",
-				"|  2 - Internação\t\t|\n",
-				"|  3 - Listar Quartos\t\t|\n",
-				"|  4 - Faturamento\t\t|\n",
-				"|  5 - Sair do Programa\t\t|\n")
+			      	"|  2 - Internação\t\t|\n",
+				      "|  3 - Listar Quartos\t\t|\n",
+				      "|  4 - Faturamento\t\t|\n",
+				      "|  5 - Sair do Programa\t\t|\n")
 		
 		escreva("|\t\t\t\t|")
 		escreva("\n")
@@ -128,9 +129,9 @@ programa
 				escreva("Quarto"," ", i+1," ", "está ocupado\t")	
 			}
 		}
-
 		escreva("\n")
 		Util.aguarde(2000)
+    
 	}
 	
 	/*
@@ -177,6 +178,7 @@ programa
 			limpa() 
 			internacao()	
 		}
+    
 	}
 	
 	funcao checkquartos()
@@ -212,6 +214,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
+
  * @POSICAO-CURSOR = 289; 
  * @DOBRAMENTO-CODIGO = [52, 84, 146, 168, 181];
  * @PONTOS-DE-PARADA = ;
