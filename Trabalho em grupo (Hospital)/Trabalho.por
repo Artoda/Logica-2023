@@ -2,7 +2,7 @@ programa
 {
 	inclua biblioteca Texto
 	inclua biblioteca Util
-	cadeia nome, tipoConsulta, telefone
+	cadeia tipoConsulta
 	logico quartos[20]
 	inteiro totalConsultas = 0, totalInternacao = 0
 	real valorConsulta = 0, valorInternacao = 0
@@ -78,6 +78,7 @@ programa
 	
 	funcao consulta ()
 	{
+		cadeia nome,telefone
 		escreva("\nDigite o nome do paciente:", " ")
 		leia(nome)
 		escreva("\nDigite o telefone do paciente:", " ")
@@ -128,19 +129,6 @@ programa
 			}	
 	}
 	
-	/*
-	funcao quartosVazios(inteiro i)
-	{
-		escreva("\nQuarto"," ", i+1," ", "está vazio")	
-	}
-	
-	funcao quartosOcupados(inteiro i)
-	{
-		escreva("\nQuarto"," ", i+1," ", "está ocupado")	
-	}
-	*/
-
-		
 	funcao checkNumeros()
 	{
 		se (selecaoQuartos >= 0 e selecaoQuartos < 20){
@@ -153,6 +141,18 @@ programa
 			internacao()	
 		}
 	}
+	
+	/*
+	funcao quartosVazios(inteiro i)
+	{
+		escreva("\nQuarto"," ", i+1," ", "está vazio")	
+	}
+	
+	funcao quartosOcupados(inteiro i)
+	{
+		escreva("\nQuarto"," ", i+1," ", "está ocupado")	
+	}
+	*/
 	
 	funcao internacao()
 	{
@@ -190,8 +190,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2560; 
- * @DOBRAMENTO-CODIGO = [47, 78, 104, 116];
+ * @POSICAO-CURSOR = 80; 
+ * @DOBRAMENTO-CODIGO = [47, 105, 117, 131];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
