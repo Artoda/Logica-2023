@@ -22,6 +22,7 @@ programa
 		escolha (decisao){
 			caso 1: consulta() 
 			pare
+			
 			caso 2: internacao()
 			pare
 			
@@ -85,72 +86,72 @@ programa
 		leia(tipoConsulta)
 		
 		tipoConsulta = Texto.caixa_alta (tipoConsulta)
+		
 		se (tipoConsulta == "PEDIATRIA"){
 			valorConsulta += 150	
 		}
 		senao{
 			valorConsulta += 120
 		}
+		
 		totalConsultas ++
+		
 		escreva("\nConsulta feita!", "\nRetornando ao menu!")
 		Util.aguarde(2000)
 		limpa()
-		
-		
 			
+	}
+
+	funcao listagemDeQuartos()
+	{
+		para(inteiro i=0; i < 20; i++){
+			se (quartos[i] == falso){
+				escreva("\nQuarto"," ", i+1," ", "está vazio")	
+				
+			}senao{
+				escreva("\nQuarto"," ", i+1," ", "está ocupado")	
+			}
+		}
 	}
 	
 	funcao checkquartos()
 	{
-	se (quartos[selecaoQuartos] == falso){
-		quartos[selecaoQuartos] = verdadeiro
-		escreva("Quarto reservado!")
-		Util.aguarde(2000) 
+		se (quartos[selecaoQuartos] == falso){
+			quartos[selecaoQuartos] = verdadeiro
+			escreva("Quarto reservado!")
+			Util.aguarde(2000) 
 		}senao{
 			escreva("\nQuarto ocupado!", "Selecione outro!")
 			Util.aguarde(2000)
 			limpa() 
 			internacao()
-		}	
+			}	
 	}
 	
-	funcao listagemDeQuartos()
-	{
-	para(inteiro i=0; i < 20; i++){
-		se (quartos[i] == falso){
-			quartosVazios(i)
-			
-			
-		}senao{
-			quartosOcupados(i)
-			
-		}
-		
-		}
-		
-	}
-	funcao quartosOcupados(inteiro i)
-	{
-	escreva("\nQuarto"," ", i+1," ", "está ocupado")	
-	}
-	
+	/*
 	funcao quartosVazios(inteiro i)
 	{
-	escreva("\nQuarto"," ", i+1," ", "está vazio")	
+		escreva("\nQuarto"," ", i+1," ", "está vazio")	
 	}
+	
+	funcao quartosOcupados(inteiro i)
+	{
+		escreva("\nQuarto"," ", i+1," ", "está ocupado")	
+	}
+	*/
+
 		
 	funcao checkNumeros()
 	{
-	  se (selecaoQuartos >= 0 e selecaoQuartos < 20){
-		checkquartos()
-	  	}
-	  senao{
-	  escreva("\nQuarto Inexistente!", "\n Digite novamente as informações!")
-	  Util.aguarde(2000)
-	  limpa() 
-	  internacao()	
-	  }
-	  
+		se (selecaoQuartos >= 0 e selecaoQuartos < 20){
+			checkquartos()
+		}
+		senao{
+			escreva("\nQuarto Inexistente!", "\n Digite novamente as informações!")
+			Util.aguarde(2000)
+			limpa() 
+			internacao()	
+		}
 	}
 	
 	funcao internacao()
@@ -189,7 +190,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 829; 
+ * @POSICAO-CURSOR = 2560; 
+ * @DOBRAMENTO-CODIGO = [47, 78, 104, 116];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
