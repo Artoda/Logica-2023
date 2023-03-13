@@ -75,15 +75,23 @@ programa
 			escreva("-")
 		}
 	}
+
+	
+	funcao dadosPaciente() {
+	     	cadeia nome,telefone
+			escreva("~~Digite os dados do paciente~~\n")
+			escreva("\nDigite o nome do paciente: ")
+			leia(nome)
+			
+			escreva("\nDigite o telefone do paciente: ")
+			leia(telefone)
+		}
 	
 	funcao consulta ()
 	{
-		cadeia nome,telefone
-		escreva("\nDigite o nome do paciente:", " ")
-		leia(nome)
-		escreva("\nDigite o telefone do paciente:", " ")
-		leia(telefone)
-		escreva("\nQual a especialidade da consulta do paciente:", " ")
+		dadosPaciente()
+		
+		escreva("\nQual a especialidade da consulta do paciente: ")
 		leia(tipoConsulta)
 		
 		tipoConsulta = Texto.caixa_alta (tipoConsulta)
@@ -128,13 +136,7 @@ programa
 	*/
 	funcao internacao()
 	{
-	cadeia telefone, nome
-	
-		escreva("\nDigite o nome do paciente:", " ")
-		leia(nome)
-		
-		escreva("\nDigite o telefone do paciente:", " ")
-		leia(telefone)
+		dadosPaciente()
 		
 		listagemDeQuartos()
 		
@@ -185,16 +187,14 @@ programa
 		escreva("\nTotal Faturado: ", " ","R$", (valorConsulta + valorInternacao))
          
 	}
-	
-	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2634; 
- * @DOBRAMENTO-CODIGO = [47, 78, 105, 151, 164];
+ * @POSICAO-CURSOR = 1394; 
+ * @DOBRAMENTO-CODIGO = [113, 153, 166];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
