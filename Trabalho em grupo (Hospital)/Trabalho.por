@@ -2,6 +2,7 @@ programa
 {
 	inclua biblioteca Texto
 	inclua biblioteca Util
+	
 	cadeia tipoConsulta
 	logico quartos[20]
 	inteiro totalConsultas = 0, totalInternacao = 0
@@ -10,37 +11,41 @@ programa
 	
 	funcao inicio()
 	{	
+	
 	inteiro decisao = 0
-	faca
-	{
-		menuPrincipal()
 		
-		escreva("\n")
-		leia(decisao)
-		limpa()
-
-		escolha (decisao){
-			caso 1: consulta() 
-			pare
+		faca
+		{
+			menuPrincipal()
 			
-			caso 2: internacao()
-			pare
-			
-			caso 3: listagemDeQuartos()
-			pare
-			
-			caso 4: faturamento()
-			pare
-			
-			caso 5: escreva("---> Fim do programa <---")
-			pare
-			
-			caso contrario:
-				escreva("\nOpção invalida", "\nRetornando ao menu....")
-				Util.aguarde(1800) 
-				limpa()
+			escreva("\n")
+			leia(decisao)
+			limpa()
+	
+			escolha (decisao)
+			{
+				caso 1: consulta() 
+				pare
+				
+				caso 2: internacao()
+				pare
+				
+				caso 3: listagemDeQuartos()
+				pare
+				
+				caso 4: faturamento()
+				pare
+				
+				caso 5: escreva("---> Fim do programa <---")
+				pare
+				
+				caso contrario:
+					escreva("\nOpção invalida", "\nRetornando ao menu....")
+					Util.aguarde(1800) 
+					limpa()
+				
 			}
-	}enquanto (decisao!=5)
+		} enquanto (decisao!=5)
 	
 	}
 	
@@ -207,8 +212,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2252; 
- * @DOBRAMENTO-CODIGO = [47, 79, 141, 163, 176];
+ * @POSICAO-CURSOR = 289; 
+ * @DOBRAMENTO-CODIGO = [52, 84, 146, 168, 181];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
