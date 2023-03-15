@@ -1,9 +1,9 @@
 programa 
 { 
 	inteiro matriz[4][2] = {{10,20},
-							{30,40},
-							{50,60},
-							{70,80}}
+					    {30,40},
+					    {50,60},
+					    {70,80}}
 	inteiro numeroDigitado, linhaInserir, colunaInserir
 	logico numeroExiste = falso, linhaCorreta = falso, colunaCorreta = falso
 	funcao inicio()
@@ -79,7 +79,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1658; 
+ * @POSICAO-CURSOR = 255; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
