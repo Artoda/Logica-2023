@@ -3,14 +3,15 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numeros[10]
-		escreva("\nDigite dez numeros!\n")
-		para(inteiro i=0; i < 10; i++){
-			leia(numeros[i])
+	 inteiro numero, fatorial, resultado =1
+
+	 escreva("Digite o número:")
+	 leia(numero)
+
+	 para(fatorial=1; fatorial <= numero; fatorial++){
+			resultado = resultado * fatorial 
 		}
-		para(inteiro i=9; i >= 0; i--){
-		escreva(numeros[i], ",")
-		}
+		escreva("O fatorial de"," ", numero," ", "é:", resultado)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +19,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 168; 
+ * @POSICAO-CURSOR = 221; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

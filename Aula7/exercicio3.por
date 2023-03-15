@@ -3,14 +3,17 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numeros[10]
-		escreva("\nDigite dez numeros!\n")
-		para(inteiro i=0; i < 10; i++){
-			leia(numeros[i])
-		}
-		para(inteiro i=9; i >= 0; i--){
-		escreva(numeros[i], ",")
-		}
+		inteiro numero
+		escreva("Digite um número para ser dobrado:")
+		leia(numero)
+		escreva("O dobro de"," ", numero," ", "é:")
+		escreva(dobro(numero))
+		
+	}
+	funcao inteiro dobro(inteiro numero){
+		inteiro dobrar
+		dobrar = numero*2
+		retorne(dobrar)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +21,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 168; 
+ * @POSICAO-CURSOR = 157; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

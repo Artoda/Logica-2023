@@ -3,13 +3,19 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numeros[10]
-		escreva("\nDigite dez numeros!\n")
-		para(inteiro i=0; i < 10; i++){
-			leia(numeros[i])
-		}
-		para(inteiro i=9; i >= 0; i--){
-		escreva(numeros[i], ",")
+		inteiro numero
+		escreva("Número:")
+		leia(numero)
+		escreva("Resultado:" + somarNumeros(numero))
+	}
+	funcao inteiro somarNumeros(inteiro n)
+	{
+		inteiro resultado
+		se(n <=1){
+			retorne 1	
+		}senao{
+			resultado = somarNumeros(n -1) * n
+			retorne resultado
 		}
 	}
 }
@@ -18,7 +24,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 168; 
+ * @POSICAO-CURSOR = 301; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

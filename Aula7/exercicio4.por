@@ -3,13 +3,15 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numeros[10]
-		escreva("\nDigite dez numeros!\n")
-		para(inteiro i=0; i < 10; i++){
-			leia(numeros[i])
-		}
-		para(inteiro i=9; i >= 0; i--){
-		escreva(numeros[i], ",")
+		inteiro numero
+		escreva("Digite um número para saber sua tabuada:")
+		leia(numero)
+		tabuada(numero)
+	}
+	funcao tabuada(inteiro numero){
+		inteiro multiplicacao
+		para(inteiro i=1; i <= 10; i++){
+			escreva("\n",multiplicacao = numero * i)
 		}
 	}
 }
@@ -18,7 +20,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 168; 
+ * @POSICAO-CURSOR = 224; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
